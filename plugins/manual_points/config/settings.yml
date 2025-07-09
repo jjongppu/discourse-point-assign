@@ -1,0 +1,4 @@
+plugins:
+  manual_points_enabled:
+    default: true
+    client: false
