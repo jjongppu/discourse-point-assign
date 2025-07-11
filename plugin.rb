@@ -26,5 +26,5 @@ after_initialize do
     mount ::DiscoursePointAssign::Engine, at: "/admin/point-assign"
   end
 
-  register_asset "javascripts/point-assign.js", :admin
+  register_asset "javascripts/discourse/initializers/point-assign.js", :admin
 end
