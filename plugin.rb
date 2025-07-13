@@ -23,6 +23,6 @@ after_initialize do
   end
 
   Discourse::Application.routes.append do
-    mount ::DiscoursePointAssign::Engine, at: "/admin/point-assign"
+    mount ::DiscoursePointAssign::Engine, at: "/admin/plugins/point-assign"
   end
 end
