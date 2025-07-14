@@ -5,6 +5,7 @@ module DiscoursePointAssign
     requires_plugin PLUGIN_NAME
 
     def index
+      render :index
     end
 
     def create
