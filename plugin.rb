@@ -20,7 +20,7 @@ after_initialize do
 
   # Admin 메뉴용 렌더링 페이지
   Discourse::Application.routes.append do
-    get '/admin/plugins/manual-points' => 'admin/plugins#index', constraints: StaffConstraint.new
+    #get '/admin/plugins/manual-points' => 'admin/plugins#index', constraints: StaffConstraint.new
   end
 
   # 내부 API용 라우트
