@@ -10,20 +10,12 @@ enabled_site_setting :manual_points_enabled
 PLUGIN_NAME ||= "discourse-point-assign"
 
 after_initialize do
-  # Admin 메뉴 노출
-  add_admin_route(
-    "js.manual_points.title",  # 정확한 JS 번역 경로
-    "manual-points",
-    { use_new_show_route: true }
-  )
-  
+  add_admin_route("js.manual_points.title", "manual-points", { use_new_show_route: true })
 
-  # Admin 메뉴용 렌더링 페이지
   Discourse::Application.routes.append do
-    #get '/admin/plugins/manual-points' => 'admin/plugins#index', constraints: StaffConstraint.new
+    get '/admin/plugins/manual-points' => 'admin/plugins#index', constraints: StaffConstraint.new
   end
 
-  # 내부 API용 라우트
   module ::DiscoursePointAssign
     class Engine < ::Rails::Engine
       engine_name PLUGIN_NAME
