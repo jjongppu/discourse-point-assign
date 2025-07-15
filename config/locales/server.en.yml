@@ -1,3 +1,4 @@
 en:
   manual_points:
     error: "Invalid user or points"
+    title: "Manual Points"

@@ -22,7 +22,9 @@ after_initialize do
     post "/" => "manual_points#create"
   end
 
+  add_admin_route 'manual_points.title', 'manual-points'
+
   Discourse::Application.routes.append do
-    mount ::DiscoursePointAssign::Engine, at: "/admin/manual-points"
+    mount ::DiscoursePointAssign::Engine, at: "/admin/plugins/manual-points"
   end
 end
