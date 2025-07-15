@@ -11,7 +11,12 @@ PLUGIN_NAME ||= "discourse-point-assign"
 
 after_initialize do
   # Admin 메뉴 노출
-  add_admin_route 'manual_points.title', 'manual-points'
+  add_admin_route(
+    "js.manual_points.title",  # 정확한 JS 번역 경로
+    "manual-points",
+    { use_new_show_route: true }
+  )
+  
 
   # Admin 메뉴용 렌더링 페이지
   Discourse::Application.routes.append do
